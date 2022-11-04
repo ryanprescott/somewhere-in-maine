@@ -31,6 +31,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@fontsource/spline-sans": "^4.5.12",
 		"@fontsource/teko": "^4.5.9"
 	}
 }

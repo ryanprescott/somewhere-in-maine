@@ -1,9 +1,31 @@
 <script lang="ts">
-	import Mark from "../lib/mark.svelte";
-import Logo from "../lib/logo.svelte";
+    import "@fontsource/spline-sans";
+    import Navbar from "$lib/navbar.svelte";
 </script>
 
-<Logo width="300px" />
-<Logo width="500px" />
-<Logo width="700px" />
-<Mark width="500px" />
+<style lang="scss">
+    @import '../styles/colors.scss';
+
+    :global(*) {
+        box-sizing: border-box;
+    }
+
+    :global(body) {
+        background-color: $offWhite;
+        color: $offBlack;
+        font-family: 'Spline Sans';
+        margin: 0;
+        padding: 0;
+    }
+
+    :global(main) {
+        padding: 6px;
+    }
+</style>
+
+<div>
+    <Navbar />
+    <main>
+        <p>You are my muse.</p>
+    </main>
+</div>

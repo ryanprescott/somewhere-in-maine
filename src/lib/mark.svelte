@@ -2,7 +2,8 @@
 
 <script lang="ts">
     import "@fontsource/teko";
-    export let width: string;
+    export let height: string;
+    export let className: string;
 </script>
 
 <style lang="scss">
@@ -25,10 +26,14 @@
       }
     }
   }
+  .mark-offset {
+    margin-left: -24px;
+  }
 </style>
 
 <svg
-    width={width}
+    height={height}
+    class={className}
     viewBox="0 0 47 45"
     version="1.1"
 >
