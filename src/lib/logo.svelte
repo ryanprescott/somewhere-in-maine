@@ -45,7 +45,6 @@
       font-weight: bold;
       letter-spacing: -0.4px;
       user-select: none;
-      color: #21001e;
       fill: currentColor;
       &-small {
         font-size: 25px;
