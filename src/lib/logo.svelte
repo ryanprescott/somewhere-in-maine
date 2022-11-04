@@ -9,7 +9,7 @@
 </script>
 
 <style lang="scss">
-  @import '../styles/colors.scss';
+  @import '../theme/colors.scss';
 
   .logo {
     display: flex;
