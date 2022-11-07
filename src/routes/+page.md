@@ -8,7 +8,7 @@
     type="website"
 />
 
-Welcome to my shitty dumb stupid website.
+Hello world!
 ----
 
-Holy shit *it just works*
+Markdown is working **fabulously** so far. I can't wait to transition all my old blog posts this way.
