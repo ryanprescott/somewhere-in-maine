@@ -14,12 +14,11 @@
         dispatch('mousedown', e);
     };
 
-    
-    const blur = (e: MouseEvent) => {
+    const blur = (e: FocusEvent) => {
         ripple.hide();
         dispatch('blur', e);
     };
-    
+
 </script>
 
 <style lang="scss">
