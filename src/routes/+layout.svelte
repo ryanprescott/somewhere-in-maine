@@ -1,16 +1,7 @@
 <script lang="ts">
     import '@fontsource/spline-sans';
-    import Navbar from '$lib/Navbar.svelte';
-
-    import { meta } from '../stores'
-    
-    $meta.site.name = 'Somewhere In Maine';
-    $: title = $meta.page.title ? `${$meta.page.title} | ${$meta.site.name}` : $meta.site.name;
+    import Navbar from '$lib/components/Navbar.svelte';
 </script>
-
-<svelte:head>
-    <title>{title}</title>
-</svelte:head>
 
 <style lang="scss">
 

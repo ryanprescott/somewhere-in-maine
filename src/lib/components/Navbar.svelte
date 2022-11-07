@@ -1,9 +1,10 @@
 <script lang="ts">
+	import Button from "./Button.svelte";
 	import Logo from "./Logo.svelte";
 </script>
 
 <style lang="scss">
-    @import "../theme/colors";
+    @import "../../theme/colors";
     .navbar {
         margin: 0;
         padding: 6px;
@@ -13,12 +14,11 @@
         align-items: center;
         justify-content: space-between;
     }
-    html.dark .navbar {
-        background: $black;
-    }
 </style>
 
 <nav class="navbar">
     <Logo variant="small" />
-    <button style="margin-top: -6px">burger</button>
+    <Button>
+        Wow
+    </Button>
 </nav>

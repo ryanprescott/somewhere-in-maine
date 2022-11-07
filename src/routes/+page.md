@@ -1,5 +1,5 @@
-<script>
-	import Meta from "$lib/Meta.svelte";
+<script lang="ts">
+	import Meta from '$lib/components/Meta.svelte';
 </script>
 
 <Meta

@@ -6,7 +6,7 @@
 </script>
 
 <style lang="scss">
-  @import '../theme/colors.scss';
+  @import '../../theme/colors.scss';
   .mark {
     path {
       fill: currentColor;
@@ -15,7 +15,7 @@
       stroke-linecap:round;
     }
     &-rock {
-      color: $rockGray;
+      color: $rock;
     }
     &-tree {
       &-dark {
