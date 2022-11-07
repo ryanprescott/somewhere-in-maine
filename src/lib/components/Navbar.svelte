@@ -3,6 +3,7 @@
 	import MenuIcon from "./icons/MenuIcon.svelte";
 	import Logo from "./Logo.svelte";
     import MediaQuery from "svelte-media-queries";
+	import Navlinks from "./Navlinks.svelte";
 </script>
 
 <style lang="scss">
@@ -35,6 +36,9 @@
                 <Button icon>
                     <MenuIcon width="32px" height="32px"/>
                 </Button>
+            {/if}
+            {#if !matches}
+                <Navlinks />
             {/if}
         </MediaQuery>
     </div>

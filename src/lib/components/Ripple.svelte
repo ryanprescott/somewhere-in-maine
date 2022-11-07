@@ -33,7 +33,7 @@
         transform: translate(-50%, -50%) scale(0);
         width: 300%;
         padding-bottom: 300%;
-        background-color: $accent1;
+        background-color: $primaryAccent4;
         border-radius: 100%;
         &.rippled {
             animation: ripple 0.7s;

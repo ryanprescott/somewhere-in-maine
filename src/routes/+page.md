@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Meta from '$lib/components/Meta.svelte';
+    import ResponsiveImage from '$lib/components/ResponsiveImage.svelte';
 </script>
 
 
@@ -9,7 +10,16 @@
     type="website"
 />
 
-Welcome to my evil lair!
+<ResponsiveImage 
+    height='400px'
+    src="/img/river-banner.webp"
+/>
+
+Welcome all!
 ----
 
 The text is going to keep changing as I make modifications and stuff to the layout.
+
+[Here's a link](https://www.google.com/unvisited)
+
+[Here's another link](https://www.google.com/)

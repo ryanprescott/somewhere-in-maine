@@ -78,8 +78,8 @@
         }
 
         &:hover {
-            background-color: $accent2;
-            border: 1px $accent2 solid;
+            background-color: $primaryAccent5;
+            border: 1px $primaryAccent5 solid;
         }
     }
 </style>

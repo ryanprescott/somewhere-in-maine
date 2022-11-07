@@ -25,14 +25,26 @@
         font-family: 'Spline Sans';
     }
 
+    :global(p, figcaption, h1, h2, h3, h4, h5, h6) {
+        margin: 12px 12px 0px 12px;
+    }
+
+    :global(a) {
+        text-decoration: none;
+        color: $stream;
+        &:hover {
+            color: $brackish;
+            text-decoration: underline;
+        }
+        &:visited {
+            color: $earth;
+        }
+    }
+
     main {
         display: block;
-        padding: 80px 12px 0px 12px;
         margin: auto;
-        background-color: $surface;
-        max-width: 960px;
         min-height: 100vh;
-        box-shadow: rgba($black, 0.1) 0px 0px 5px;
     }
 
 </style>

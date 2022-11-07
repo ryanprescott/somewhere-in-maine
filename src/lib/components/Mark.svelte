@@ -19,10 +19,10 @@
     }
     &-tree {
       &-dark {
-        color: $darkGreen;
+        color: $spruce;
       }
       &-light {
-        color: $lightGreen;
+        color: $hemlock;
       }
     }
   }
