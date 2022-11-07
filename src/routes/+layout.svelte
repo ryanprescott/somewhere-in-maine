@@ -11,7 +11,7 @@
         box-sizing: border-box;
     }
 
-    :global(body) {
+    :global(body, html) {
         margin: 0;
         padding: 0;
     }
@@ -27,7 +27,7 @@
 
     main {
         display: block;
-        padding: 0 12px;
+        padding: 80px 12px 0px 12px;
         margin: auto;
         background-color: $surface;
         max-width: 960px;

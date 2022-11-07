@@ -11,9 +11,11 @@
         margin: 0;
         padding: 6px;
         padding-bottom: 0px;
-        box-shadow: rgba($black, 0.3) 2px 2px 20px;
+        box-shadow: rgba($black, 0.1) 2px 2px 5px;
         background-color: $surface;
-
+        position: fixed;
+        width: 100%;
+        
         &-inner {
             display: flex;
             align-items: center;

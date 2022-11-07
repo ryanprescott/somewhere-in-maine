@@ -45,7 +45,7 @@
     .button {
         display: flex;
         position: relative;
-        background-color: $background;
+        background-color: transparent;
         color: $onSurface;
 
         transition: background-color 0.25s;
