@@ -90,7 +90,8 @@
     {height}
     on:mousedown={mousedown}
     on:blur={blur}
->
+    on:click
+> 
     <Ripple bind:this={ripple} />
 
     <div class='button-label'>

@@ -2,6 +2,7 @@
     @import "../../theme/theme.scss";
 
     .navlinks {
+        padding: 0;
         display: flex;
         text-transform: uppercase;
         a, a:visited {
@@ -12,7 +13,7 @@
             }
         }
         li {
-            padding: 12px;
+            padding: 6px 12px 6px 6px;
             margin: 0;
             list-style: none;
         }

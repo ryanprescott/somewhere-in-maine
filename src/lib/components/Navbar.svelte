@@ -4,6 +4,8 @@
 	import Logo from "./Logo.svelte";
     import MediaQuery from "svelte-media-queries";
 	import Navlinks from "./Navlinks.svelte";
+
+    let show = false;
 </script>
 
 <style lang="scss">
@@ -25,21 +27,34 @@
             margin: auto;
         }
     }
+
+    .navlinks-mobile {
+        max-height: 0px;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out;
+        &.shown {
+            max-height: 65px;
+        }
+    }
 </style>
 
-
-<nav class="navbar">
-    <div class="navbar-inner">
-        <Logo variant="small" />
-        <MediaQuery query="(max-width: 800px)" let:matches>
-            {#if matches}
-                <Button icon>
-                    <MenuIcon width="32px" height="32px"/>
-                </Button>
-            {/if}
-            {#if !matches}
+<MediaQuery query="(max-width: 800px)" let:matches>
+    <nav class="navbar">
+        <div class="navbar-inner">
+            <Logo variant="small" />
+                {#if matches}
+                    <Button icon on:click={() => show = !show}>
+                        <MenuIcon width="32px" height="32px"/>
+                    </Button>
+                {/if}
+                {#if !matches}
+                    <Navlinks />
+                {/if}
+        </div>
+        {#if matches}
+            <div class={`navlinks-mobile ${show ? 'shown' : ''}`}>
                 <Navlinks />
-            {/if}
-        </MediaQuery>
-    </div>
-</nav>
+            </div>
+        {/if}
+    </nav>
+</MediaQuery>
