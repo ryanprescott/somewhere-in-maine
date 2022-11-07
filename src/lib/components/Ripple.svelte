@@ -8,11 +8,11 @@
         top = typeof y === 'number' ? `${y}px` : y;
         shown = false;
         setTimeout(() => shown = true, 1);
-    }
+    };
 
     export const hide = () => {
         shown = false;
-    }
+    };
 </script>
 
 <style lang="scss">
