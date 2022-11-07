@@ -4,20 +4,7 @@
 </script>
 
 <style lang="scss">
-  @keyframes slide-in {
-    0% {
-      opacity: 0.2;
-      transform: translateX(-10%);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-
   .logo {
-    animation: slide-in 1s ease-out;
-    margin-left: -30px;
     display: flex;
     align-items: center;
     &-text {

@@ -8,7 +8,4 @@
     type="website"
 />
 
-Hello world!
-----
-
-Markdown is working **fabulously** so far. I can't wait to transition all my old blog posts this way.
+<p>It doesn't even matter!</p>

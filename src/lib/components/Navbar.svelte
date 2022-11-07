@@ -2,29 +2,38 @@
 	import Button from "./Button.svelte";
 	import MenuIcon from "./icons/MenuIcon.svelte";
 	import Logo from "./Logo.svelte";
+    import MediaQuery from "svelte-media-queries";
 </script>
 
 <style lang="scss">
-    @import "../../theme/colors";
+    @import "../../theme/theme";
     .navbar {
         margin: 0;
         padding: 6px;
         padding-bottom: 0px;
         box-shadow: rgba($black, 0.3) 2px 2px 20px;
+        background-color: $surface;
 
         &-inner {
             display: flex;
             align-items: center;
             justify-content: space-between;
+            max-width: 960px;
+            margin: auto;
         }
     }
 </style>
 
+
 <nav class="navbar">
     <div class="navbar-inner">
         <Logo variant="small" />
-        <Button icon>
-            <MenuIcon width="32px" height="32px"/>
-        </Button>
+        <MediaQuery query="(max-width: 800px)" let:matches>
+            {#if matches}
+                <Button icon>
+                    <MenuIcon width="32px" height="32px"/>
+                </Button>
+            {/if}
+        </MediaQuery>
     </div>
 </nav>

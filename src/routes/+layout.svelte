@@ -26,7 +26,12 @@
     }
 
     main {
+        display: block;
         padding: 0 12px;
+        margin: auto;
+        background-color: $surface;
+        max-width: 960px;
+        min-height: 100vh;
     }
 
 </style>
