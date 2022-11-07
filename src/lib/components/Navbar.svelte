@@ -19,7 +19,7 @@
 
 <nav class="navbar">
     <Logo variant="small" />
-    <Button>
+    <Button type="iconButton">
         <MenuIcon />
     </Button>
 </nav>

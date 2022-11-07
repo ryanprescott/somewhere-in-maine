@@ -1,17 +1,16 @@
 <script lang="ts">
-    let top = 0, left = 0;
+    let top: string;
+    let left: string;
     let shown = false;
 
-    export const show = (x: number, y: number) => {
-        left = x;
-        top = y;
+    export const show = (x: string | number = '50%', y: string | number = '50%') => {
+        left = typeof x === 'number' ? `${x}px` : x;
+        top = typeof y === 'number' ? `${y}px` : y;
         shown = false;
         setTimeout(() => shown = true, 1);
     }
 
     export const hide = () => {
-        left = 0;
-        top = 0;
         shown = false;
     }
 </script>
@@ -26,28 +25,23 @@
         }
         100% {
             transform: translate(-50%, -50%) scale(1);
-            opacity: 0.3;
+            opacity: 0;
         }
     }
     .ripple-effect {
         position: absolute;
-        transform: translate(-50%, -50%) scale(1);
-        transition: opacity 0.2s;
-        opacity: 0;
+        transform: translate(-50%, -50%) scale(0);
         width: 300%;
         padding-bottom: 300%;
         background-color: $accent1;
         border-radius: 100%;
-        box-shadow: $accent1 0 0 30px 8px;
         &.rippled {
-            animation: ripple 0.5s;
-            transform: translate(-50%, -50%) scale(1);
-            opacity: 0.3;
+            animation: ripple 0.7s;
         }
     }
 </style>
 
 <span 
     class={`ripple-effect${shown ? ' rippled' : ''}`}
-    style={`top: ${top}px; left: ${left}px;`}
+    style={`top: ${top}; left: ${left};`}
 />

@@ -1,6 +1,12 @@
 <script lang="ts">
+    enum ButtonType {
+        IconButton = 'iconButton'
+    }
+
     export let width: number | string | null | undefined = 'auto';
     export let height: number | string | null | undefined = 'auto';
+
+    export let type: ButtonType | undefined = undefined;
 
     import { createEventDispatcher } from 'svelte';
 	import Ripple from './Ripple.svelte';
@@ -10,7 +16,12 @@
     const dispatch = createEventDispatcher();
 
     const mousedown = (e: MouseEvent) => {
-        ripple.show(e.offsetX, e.offsetY)
+        if (type === ButtonType.IconButton) {
+            ripple.show()
+        } else {
+            ripple.show(e.offsetX, e.offsetY);
+        }
+
         dispatch('mousedown', e);
     };
 
@@ -19,6 +30,13 @@
         dispatch('blur', e);
     };
 
+    const classArray = ['button'];
+
+    if (type === ButtonType.IconButton) {
+        classArray.push('button-icon');
+    }
+
+    const className = classArray.join(' ');
 </script>
 
 <style lang="scss">
@@ -42,8 +60,8 @@
         color: $onSurface;
 
         transition: background-color 0.25s;
+        border: transparent 1px solid;
         border-radius: 12px;
-        border: 1px $accent1 solid;
         padding: 0;
         overflow: hidden;
 
@@ -54,17 +72,31 @@
             width: 100%;
             height: 100%;
             padding: 12px;
-            z-index: 1;
+
+            &-guard {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                margin: -12px -12px;
+            }
+        }
+
+        &-icon {
+            border-radius: 50%;
+            .button-label {
+                padding: 6px;
+            }
         }
 
         &:hover {
             background-color: $accent2;
+            border: 1px $accent2 solid;
         }
     }
 </style>
 
 <button
-    class="button"
+    class={className}
     {width}
     {height}
     on:mousedown={mousedown}
@@ -74,5 +106,6 @@
 
     <div class='button-label'>
         <slot></slot>
+        <div class='button-label-guard' />
     </div>
 </button>
