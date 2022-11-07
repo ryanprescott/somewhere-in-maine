@@ -32,6 +32,7 @@
         background-color: $surface;
         max-width: 960px;
         min-height: 100vh;
+        box-shadow: rgba($black, 0.1) 0px 0px 5px;
     }
 
 </style>
