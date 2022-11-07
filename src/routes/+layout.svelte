@@ -2,10 +2,10 @@
     import '@fontsource/spline-sans';
     import Navbar from '$lib/Navbar.svelte';
 
-    import { pageTitle, siteName } from '../stores/meta'
+    import { meta } from '../stores'
     
-    $siteName = 'Somewhere In Maine';
-    $: title = $pageTitle ? `${$pageTitle} | ${$siteName}` : $siteName;
+    $meta.site.name = 'Somewhere In Maine';
+    $: title = $meta.page.title ? `${$meta.page.title} | ${$meta.site.name}` : $meta.site.name;
 </script>
 
 <svelte:head>
@@ -32,7 +32,7 @@
     }
 
     main {
-        padding: 6px;
+        padding: 0 12px;
     }
 
 </style>

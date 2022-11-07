@@ -1,16 +1,12 @@
 <script lang="ts">
-	import {
-        siteName,
-        pageTitle,
-        pageDescription,
-    } from '../stores/meta';
+	import { meta } from '../stores';
 
     export let title: string;
     export let description: string;
     export let type: 'article' | 'website';
 
-    $pageTitle = title;
-    $pageDescription = description;
+    $meta.page.title = title;
+    $meta.page.description = description;
 </script>
 
 <svelte:head>
@@ -18,7 +14,7 @@
     <meta name="description" content={description} />
 
     <!-- Open Graph-->
-    <meta property="og:site_name" content={$siteName} />
+    <meta property="og:site_name" content={$meta.site.name} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={title} />
     <meta property="og:type" content={type} />
