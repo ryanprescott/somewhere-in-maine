@@ -17,9 +17,12 @@
     }
 
     :global(html) {
-        font-family: 'Spline Sans';
         background-color: $background;
         color: $onSurface;
+    }
+
+    :global(body, button, input) {
+        font-family: 'Spline Sans';
     }
 
     main {
