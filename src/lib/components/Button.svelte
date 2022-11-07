@@ -6,7 +6,7 @@
     export let width: number | string | null | undefined = 'auto';
     export let height: number | string | null | undefined = 'auto';
 
-    export let type: ButtonType | undefined = undefined;
+    export let icon = false;
 
     import { createEventDispatcher } from 'svelte';
 	import Ripple from './Ripple.svelte';
@@ -16,7 +16,7 @@
     const dispatch = createEventDispatcher();
 
     const mousedown = (e: MouseEvent) => {
-        if (type === ButtonType.IconButton) {
+        if (icon) {
             ripple.show()
         } else {
             ripple.show(e.offsetX, e.offsetY);
@@ -32,7 +32,7 @@
 
     const classArray = ['button'];
 
-    if (type === ButtonType.IconButton) {
+    if (icon) {
         classArray.push('button-icon');
     }
 
@@ -41,17 +41,6 @@
 
 <style lang="scss">
     @import '../../theme/theme.scss';
-
-    @keyframes ripple {
-        0% {
-            transform: translate(-50%, -50%) scale(0);
-            opacity: 1;
-        }
-        100% {
-            transform: translate(-50%, -50%) scale(1);
-            opacity: 0;
-        }
-    }
 
     .button {
         display: flex;
