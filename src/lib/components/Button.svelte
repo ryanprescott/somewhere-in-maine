@@ -3,29 +3,20 @@
     export let height: number | string | null | undefined = 'auto';
 
     import { createEventDispatcher } from 'svelte';
+	import Ripple from './Ripple.svelte';
+
+    let ripple: Ripple;
 
     const dispatch = createEventDispatcher();
 
-    let rippleTop = 0, rippleLeft = 0;
-
-    let isRippled = false;
-
-    const ripple = (e: MouseEvent) => {
-        rippleTop = e.offsetY;
-        rippleLeft = e.offsetX;
-
-        isRippled = false;
-        setTimeout(() => isRippled = true, 10);
-
-    };
-
     const mousedown = (e: MouseEvent) => {
-        ripple(e);
+        ripple.show(e.offsetX, e.offsetY)
         dispatch('mousedown', e);
     };
 
-    const blur = (e: FocusEvent) => {
-        isRippled = false;
+    
+    const blur = (e: MouseEvent) => {
+        ripple.hide();
         dispatch('blur', e);
     };
     
@@ -41,48 +32,27 @@
         }
         100% {
             transform: translate(-50%, -50%) scale(1);
-            opacity: 0.2;
+            opacity: 0;
         }
     }
 
     .button {
-        &-ripple {
-            &-container {
-                height: 100%;
-                width: 100%;
-                overflow: hidden;
-            }
-            &-effect {
-                position: absolute;
-                transform: translate(-50%, -50%) scale(1);
-                transition: opacity 0.5s;
-                opacity: 0;
-                width: 300%;
-                padding-bottom: 300%;
-                background-color: $accent1;
-                border-radius: 100%;
-                box-shadow: $accent1 0 0 30px 8px;
-                &.rippled {
-                    animation: ripple 0.5s;
-                    transform: translate(-50%, -50%) scale(1);
-                    opacity: 0.2;
-                }
-            }
-        }
-
-        display: flex;
-
+        display: inline-block;
+        position: relative;
         background-color: $background;
         color: $onSurface;
-
-        position: relative;
 
         transition: background-color 0.25s;
         border-radius: 12px;
         border: 1px $accent1 solid;
+        padding: 0;
         overflow: hidden;
 
         &-label {
+            position: relative;
+            background-color: transparent;
+            width: 100%;
+            height: 100%;
             padding: 12px;
             z-index: 1;
         }
@@ -100,13 +70,9 @@
     on:mousedown={mousedown}
     on:blur={blur}
 >
-    <div class='button-ripple-container'>
-        <span 
-            class={`button-ripple-effect ${isRippled ? 'rippled' : ''}`}
-            style={`top: ${rippleTop}px; left: ${rippleLeft}px;`}
-        />
-    </div>
-    <span class='button-label'>
+    <Ripple bind:this={ripple} />
+
+    <div class='button-label'>
         <slot></slot>
-    </span>
+    </div>
 </button>
