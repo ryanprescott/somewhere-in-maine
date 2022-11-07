@@ -29,7 +29,7 @@
 </style>
 
 <svg
-  height={height}
+  {height}
   class="mark"
   viewBox="0 0 47 45"
   version="1.1"

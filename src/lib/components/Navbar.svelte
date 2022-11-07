@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Button from "./Button.svelte";
+	import MenuIcon from "./icons/MenuIcon.svelte";
 	import Logo from "./Logo.svelte";
 </script>
 
@@ -19,6 +20,6 @@
 <nav class="navbar">
     <Logo variant="small" />
     <Button>
-        Wow
+        <MenuIcon />
     </Button>
 </nav>

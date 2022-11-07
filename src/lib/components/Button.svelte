@@ -36,7 +36,7 @@
     }
 
     .button {
-        display: inline-block;
+        display: flex;
         position: relative;
         background-color: $background;
         color: $onSurface;
@@ -49,6 +49,7 @@
 
         &-label {
             position: relative;
+            display: flex;
             background-color: transparent;
             width: 100%;
             height: 100%;
@@ -64,8 +65,8 @@
 
 <button
     class="button"
-    width={width}
-    height={height}
+    {width}
+    {height}
     on:mousedown={mousedown}
     on:blur={blur}
 >
