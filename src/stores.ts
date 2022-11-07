@@ -18,4 +18,4 @@ export const meta = writable({
         title: '',
         description: '',
     }
-} as MetaStore); 
+} as MetaStore);
