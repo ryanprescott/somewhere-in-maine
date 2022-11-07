@@ -1,35 +1,16 @@
 <script lang="ts">
-    import { browser } from '$app/environment'
+    import '@fontsource/spline-sans';
+    import Navbar from '$lib/Navbar.svelte';
 
-    import "@fontsource/spline-sans";
-    import Navbar from "$lib/navbar.svelte";
-
-    let darkMode = true
-
-    function handleSwitchDarkMode() {
-        darkMode = !darkMode
-
-        localStorage.setItem('theme', darkMode ? 'dark' : 'light')
-
-        darkMode
-            ? document.documentElement.classList.add('dark')
-            : document.documentElement.classList.remove('dark')
-    }
-
-    if (browser) {
-        if (
-            localStorage.theme === 'dark' ||
-            (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
-        ) {
-            document.documentElement.classList.add('dark')
-            darkMode = true
-        } else {
-            document.documentElement.classList.remove('dark')
-            darkMode = false
-        }
-    }
-
+    import { pageTitle, siteName } from '../stores/meta'
+    
+    $siteName = 'Somewhere In Maine';
+    $: title = $pageTitle ? `${$pageTitle} | ${$siteName}` : $siteName;
 </script>
+
+<svelte:head>
+    <title>{title}</title>
+</svelte:head>
 
 <style lang="scss">
 
@@ -48,11 +29,6 @@
         font-family: 'Spline Sans';
         background-color: $background;
         color: $onSurface;
-    }
-
-    :global(html.dark) {
-        background-color: $backgroundDark;
-        color: $onSurfaceDark;
     }
 
     main {
