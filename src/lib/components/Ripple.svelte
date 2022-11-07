@@ -26,13 +26,13 @@
         }
         100% {
             transform: translate(-50%, -50%) scale(1);
-            opacity: 0.2;
+            opacity: 0.3;
         }
     }
     .ripple-effect {
         position: absolute;
         transform: translate(-50%, -50%) scale(1);
-        transition: opacity 0.5s;
+        transition: opacity 0.2s;
         opacity: 0;
         width: 300%;
         padding-bottom: 300%;
@@ -40,8 +40,9 @@
         border-radius: 100%;
         box-shadow: $accent1 0 0 30px 8px;
         &.rippled {
-            animation: ripple 0.5s forwards;
-            opacity: 0.2;
+            animation: ripple 0.5s;
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 0.3;
         }
     }
 </style>
