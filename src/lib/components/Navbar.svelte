@@ -11,15 +11,20 @@
         padding: 6px;
         padding-bottom: 0px;
         box-shadow: rgba($black, 0.3) 2px 2px 20px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+
+        &-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
     }
 </style>
 
 <nav class="navbar">
-    <Logo variant="small" />
-    <Button icon>
-        <MenuIcon width="32px" height="32px"/>
-    </Button>
+    <div class="navbar-inner">
+        <Logo variant="small" />
+        <Button icon>
+            <MenuIcon width="32px" height="32px"/>
+        </Button>
+    </div>
 </nav>
