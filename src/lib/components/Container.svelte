@@ -8,7 +8,7 @@
     .container {
         @import "../../theme/theme.scss";
 
-        padding: 12px;
+        padding: 24px 12px;
 
         color: $onSurface;
 
@@ -19,8 +19,11 @@
             background-color: $primaryAccent5;
         }
         &-inner {
-            max-width: 960px;
-            margin: 0 auto;
+            @media screen and (max-width: 960px) {
+                width: 100%;
+            }
+            width: 960px;
+            margin: auto;
         }
     }
 </style>
