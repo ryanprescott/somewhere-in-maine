@@ -23,17 +23,17 @@
 
     let top: string;
     let left: string;
-    let shown = false;
+    let rippled = false;
 
     export const show = (x: string | number = '50%', y: string | number = '50%') => {
         left = typeof x === 'number' ? `${x}px` : x;
         top = typeof y === 'number' ? `${y}px` : y;
-        shown = false;
-        setTimeout(() => shown = true, 1);
+        rippled = false;
+        setTimeout(() => rippled = true, 1);
     };
 
     export const hide = () => {
-        shown = false;
+        rippled = false;
     };
 </script>
 
@@ -64,6 +64,7 @@
 </style>
 
 <span 
-    class={`ripple-effect${shown ? ' rippled' : ''}`}
+    class='ripple-effect'
+    class:rippled
     style={`top: ${top}; left: ${left};`}
 />
