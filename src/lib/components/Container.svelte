@@ -16,7 +16,7 @@
             background-color: $surface;
         }
         &-secondary {
-            background-color: $primaryAccent3;
+            background-color: $primaryAccent5;
         }
         &-inner {
             max-width: 960px;
