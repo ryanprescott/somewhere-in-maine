@@ -3,9 +3,7 @@
         IconButton = 'iconButton'
     }
 
-    export let width: number | string | null | undefined = 'auto';
-    export let height: number | string | null | undefined = 'auto';
-
+    export let variant: 'text' | 'outlined' | 'contained' = 'text';
     export let icon = false;
 
     import { createEventDispatcher } from 'svelte';
@@ -32,6 +30,8 @@
 
     const classArray = ['button'];
 
+    classArray.push(`button-${variant}`);
+    
     if (icon) {
         classArray.push('button-icon');
     }
@@ -86,8 +86,6 @@
 
 <button
     class={className}
-    {width}
-    {height}
     on:mousedown={mousedown}
     on:blur={blur}
     on:click

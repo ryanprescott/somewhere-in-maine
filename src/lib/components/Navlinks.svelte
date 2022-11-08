@@ -1,3 +1,12 @@
+<script lang="ts">
+    const links = [
+        {name: 'Home', path: '/'},
+        {name: 'About', path: '/about'},
+        {name: 'Blog', path: '/blog'},
+        {name: 'Contact', path: '/contact'},
+    ];
+</script>
+
 <style lang="scss">
     @import "../../theme/theme.scss";
 
@@ -21,8 +30,7 @@
 </style>
 
 <ul class="navlinks" role="navigation">
-    <a href="/"><li>Home</li></a>
-    <a href="/"><li>About</li></a>
-    <a href="/"><li>Blog</li></a>
-    <a href="/"><li>Contact</li></a>
+    {#each links as link}
+        <a href={link.path}><li>{link.name}</li></a>
+    {/each}
 </ul>

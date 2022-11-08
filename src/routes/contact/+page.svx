@@ -1,0 +1,22 @@
+<script lang="ts">
+	import Meta from '$lib/components/Meta.svelte';
+    import Button from '$lib/components/Button.svelte';
+    import ResponsiveImage from '$lib/components/ResponsiveImage.svelte';
+</script>
+
+
+<Meta
+    title="Home"
+    description="Home page"
+    type="website"
+/>
+
+<ResponsiveImage 
+    height='400px'
+    src="/img/river-banner.webp"
+/>
+
+About
+----
+
+This is a test page. More to come!

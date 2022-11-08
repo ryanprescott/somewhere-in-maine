@@ -1,0 +1,16 @@
+<script lang="ts">
+	import Meta from '$lib/components/Meta.svelte';
+    import Button from '$lib/components/Button.svelte';
+    import ResponsiveImage from '$lib/components/ResponsiveImage.svelte';
+</script>
+
+<Meta
+    title="Oops!"
+    description="404 Not Found"
+    type="website"
+/>
+
+Oops!
+----
+
+Looks like you tried to find something that doesn't exist.

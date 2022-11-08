@@ -1,0 +1,25 @@
+<script lang="ts">
+	import Meta from '$lib/components/Meta.svelte';
+    import Button from '$lib/components/Button.svelte';
+    import ResponsiveImage from '$lib/components/ResponsiveImage.svelte';
+</script>
+
+<Meta
+    title="Home"
+    description="Home page"
+    type="website"
+/>
+
+<ResponsiveImage 
+    height='400px'
+    src="/img/river-banner.webp"
+/>
+
+Welcome all!
+----
+
+The text is going to keep changing as I make modifications and stuff to the layout.
+
+[Here's a link](https://www.google.com/unvisited)
+
+[Here's another link](https://www.google.com/)
