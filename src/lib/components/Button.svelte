@@ -1,7 +1,6 @@
 <script lang="ts">
-    enum ButtonType {
-        IconButton = 'iconButton'
-    }
+    import { createEventDispatcher } from 'svelte';
+	import Ripple from './Ripple.svelte';
 
     export let variant: 'text' | 'outlined' | 'contained' = 'text';
     export let icon = false;
@@ -9,9 +8,6 @@
     let text = variant === 'text';
     let outlined = variant === 'outlined';
     let contained = variant === 'contained';
-
-    import { createEventDispatcher } from 'svelte';
-	import Ripple from './Ripple.svelte';
 
     let ripple: Ripple;
 
@@ -84,7 +80,7 @@
     class:button-outlined={outlined}
     class:button-contained={contained}
     class:button-icon={icon}
-    
+
     on:mousedown={mousedown}
     on:blur={blur}
     on:click
