@@ -50,21 +50,35 @@
             opacity: 0;
         }
     }
-    .ripple-effect {
-        position: absolute;
-        transform: translate(-50%, -50%) scale(0);
-        width: 300%;
-        padding-bottom: 300%;
-        background-color: $primaryAccent4;
-        border-radius: 100%;
-        &.rippled {
+    .ripple{ 
+        &-root {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        &-effect {
+            position: absolute;
+            transform: translate(-50%, -50%) scale(0);
+            width: 300%;
+            padding-bottom: 300%;
+            background-color: $primaryAccent4;
+            border-radius: 100%;
             animation: ripple 0.7s;
+        }
+        &-cover {
+            position: absolute;
+            width: 100%;
+            height: 100%;
         }
     }
 </style>
 
-<span 
-    class='ripple-effect'
-    class:rippled
-    style={`top: ${top}; left: ${left};`}
-/>
+<div class='ripple-root'>
+    {#if rippled}
+        <span 
+            class='ripple-effect'
+            style={`top: ${top}; left: ${left};`}
+        />
+    {/if}
+    <div class='ripple-cover' />
+</div>

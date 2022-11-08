@@ -46,7 +46,6 @@
 
         &-label {
             position: relative;
-            display: flex;
             background-color: transparent;
             width: 100%;
             height: 100%;
@@ -89,6 +88,5 @@
 
     <div class='button-label'>
         <slot></slot>
-        <div class='button-label-guard' />
     </div>
 </button>
