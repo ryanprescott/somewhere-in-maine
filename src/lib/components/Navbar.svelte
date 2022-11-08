@@ -41,7 +41,7 @@
 <MediaQuery query="(max-width: 800px)" let:matches>
     <nav class="navbar">
         <div class="navbar-inner">
-            <Logo variant="small" />
+            <Logo />
                 {#if matches}
                     <Button icon on:click={() => show = !show}>
                         <MenuIcon width="32px" height="32px"/>
