@@ -6,6 +6,10 @@
     export let variant: 'text' | 'outlined' | 'contained' = 'text';
     export let icon = false;
 
+    let text = variant === 'text';
+    let outlined = variant === 'outlined';
+    let contained = variant === 'contained';
+
     import { createEventDispatcher } from 'svelte';
 	import Ripple from './Ripple.svelte';
 
@@ -27,16 +31,6 @@
         ripple.hide();
         dispatch('blur', e);
     };
-
-    const classArray = ['button'];
-
-    classArray.push(`button-${variant}`);
-    
-    if (icon) {
-        classArray.push('button-icon');
-    }
-
-    const className = classArray.join(' ');
 </script>
 
 <style lang="scss">
@@ -85,7 +79,12 @@
 </style>
 
 <button
-    class={className}
+    class='button'
+    class:button-text={text}
+    class:button-outlined={outlined}
+    class:button-contained={contained}
+    class:button-icon={icon}
+    
     on:mousedown={mousedown}
     on:blur={blur}
     on:click
