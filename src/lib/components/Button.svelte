@@ -15,6 +15,7 @@
 
     const mousedown = (e: MouseEvent) => {
         if (icon) {
+            // Always originate from the middle
             ripple.show()
         } else {
             ripple.show(e.offsetX, e.offsetY);

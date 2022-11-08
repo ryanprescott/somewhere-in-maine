@@ -21,13 +21,16 @@
     }
     */
 
-    let top: string;
-    let left: string;
+    let x: string | number | undefined;
+    let y: string | number | undefined;
     let rippled = false;
 
-    export const show = (x: string | number = '50%', y: string | number = '50%') => {
-        left = typeof x === 'number' ? `${x}px` : x;
-        top = typeof y === 'number' ? `${y}px` : y;
+    $: left = typeof x === 'number' ? `${x}px` : x || '50%';
+    $: top = typeof y === 'number' ? `${y}px` : y || '50%';
+
+    export const show = (posX?: string | number, posY?: string | number) => {
+        x = posX;
+        y = posY;
         rippled = false;
         setTimeout(() => rippled = true, 1);
     };
@@ -77,7 +80,8 @@
     {#if rippled}
         <span 
             class='ripple-effect'
-            style={`top: ${top}; left: ${left};`}
+            style:left
+            style:top
         />
     {/if}
     <div class='ripple-cover' />
