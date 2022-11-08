@@ -14,6 +14,7 @@
     :global(body, html) {
         margin: 0;
         padding: 0;
+        overflow: hidden;
     }
 
     :global(html) {
@@ -26,7 +27,7 @@
     }
 
     :global(p, figcaption, h1, h2, h3, h4, h5, h6) {
-        margin: 12px 12px 0px 12px;
+        margin-bottom: 12px;
     }
 
     :global(a) {
@@ -41,16 +42,22 @@
         }
     }
 
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+
     main {
         display: block;
+        flex-grow: 1;
         margin: auto;
-        min-height: 100vh;
-        padding-top: 76px;
+        overflow-y: scroll;
     }
 
 </style>
 
-<div>
+<div class="wrapper">
     <Navbar />
     <main>
         <slot></slot>

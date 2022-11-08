@@ -16,8 +16,8 @@
         padding-bottom: 0px;
         box-shadow: rgba($black, 0.1) 2px 2px 5px;
         background-color: $surface;
-        position: fixed;
         width: 100%;
+        z-index: 99999;
         
         &-inner {
             display: flex;

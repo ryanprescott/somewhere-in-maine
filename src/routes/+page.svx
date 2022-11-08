@@ -1,6 +1,7 @@
-<script lang="ts">
+<script>
 	import Meta from '$lib/components/Meta.svelte';
     import Button from '$lib/components/Button.svelte';
+    import Container from '$lib/components/Container.svelte';
     import ResponsiveImage from '$lib/components/ResponsiveImage.svelte';
 </script>
 
@@ -15,9 +16,9 @@
     src="/img/river-banner.webp"
 />
 
-<Button>Hello</Button>
+<Container>
 
-Welcome all!
+This is a website.
 ----
 
 The text is going to keep changing as I make modifications and stuff to the layout.
@@ -25,3 +26,37 @@ The text is going to keep changing as I make modifications and stuff to the layo
 [Here's a link](https://www.google.com/unvisited)
 
 [Here's another link](https://www.google.com/)
+
+<Button>Sample button</Button>
+
+</Container>
+
+<Container variant="secondary">
+
+This is a website.
+----
+
+The text is going to keep changing as I make modifications and stuff to the layout.
+
+[Here's a link](https://www.google.com/unvisited)
+
+[Here's another link](https://www.google.com/)
+
+<Button>Sample button</Button>
+
+</Container>
+
+<Container>
+
+This is a website.
+----
+
+The text is going to keep changing as I make modifications and stuff to the layout.
+
+[Here's a link](https://www.google.com/unvisited)
+
+[Here's another link](https://www.google.com/)
+
+<Button>Sample button</Button>
+
+</Container>
