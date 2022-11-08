@@ -14,7 +14,6 @@
     .navlinks {
         padding: 0;
         display: flex;
-        text-transform: uppercase;
         a, a:visited {
             color: $primaryAccent1;
             text-decoration: none;
