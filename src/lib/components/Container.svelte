@@ -8,7 +8,7 @@
     .container {
         @import "../../theme/theme.scss";
 
-        padding: 24px 12px;
+        padding: 60px 12px;
 
         color: $onSurface;
 

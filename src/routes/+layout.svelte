@@ -1,6 +1,10 @@
 <script lang="ts">
     import '@fontsource/spline-sans';
     import Navbar from '$lib/components/Navbar.svelte';
+
+    let scroll: number;
+    $: variant = scroll >= 76 ? 'filled' : 'transparent';
+
 </script>
 
 <style lang="scss">
@@ -14,7 +18,8 @@
     :global(body, html) {
         margin: 0;
         padding: 0;
-        overflow: hidden;
+        scroll-behavior: smooth;
+        scroll-padding-top: 116px;
     }
 
     :global(html) {
@@ -43,24 +48,18 @@
         }
     }
 
-    .wrapper {
-        display: flex;
-        flex-direction: column;
-        height: 100vh;
-    }
-
     main {
         display: block;
-        flex-grow: 1;
         margin: auto;
-        overflow-y: scroll;
     }
 
 </style>
 
-<div class="wrapper">
-    <Navbar />
-    <main>
-        <slot></slot>
-    </main>
-</div>
+<a id="home"> </a>
+<Navbar bind:variant={variant} />
+<main>
+    <slot></slot>
+</main>
+{variant}
+
+<svelte:window bind:scrollY={scroll} />

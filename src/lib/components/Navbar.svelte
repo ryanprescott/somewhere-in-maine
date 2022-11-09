@@ -5,20 +5,29 @@
     import MediaQuery from "svelte-media-queries";
 	import Navlinks from "./Navlinks.svelte";
 
+    export let variant: 'filled' | 'transparent' = 'transparent';
+
     let show = false;
 </script>
 
 <style lang="scss">
     @import "../../theme/theme";
     .navbar {
+        position: fixed;
         margin: 0;
         padding: 6px;
         padding-bottom: 0px;
-        box-shadow: rgba($black, 0.1) 2px 2px 5px;
-        background-color: $surface;
+        min-height: 76px;
+        background-color: transparent;
         width: 100%;
         z-index: 99999;
-        
+        transition: background-color 0.5s, box-shadow 0.5s;
+
+        &-filled {
+            box-shadow: rgba($black, 0.1) 2px 2px 5px;
+            background-color: $surface;
+        }
+
         &-inner {
             display: flex;
             align-items: center;
@@ -39,7 +48,11 @@
 </style>
 
 <MediaQuery query="(max-width: 800px)" let:matches>
-    <nav class="navbar">
+    <nav
+        class="navbar"
+        class:navbar-filled={variant === 'filled'}
+        class:navbar-transparent={variant === 'transparent'}
+    >
         <div class="navbar-inner">
             <Logo />
                 {#if matches}

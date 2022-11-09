@@ -6,15 +6,14 @@
 
 <style lang="scss">
     .responsive-image {
-        width: 100%;
+        width: 100vw;
         object-fit: cover;
-        object-position: center;
     }
 </style>
 
 <img
     {src}
     {alt}
-    style={`height: ${height};`}
+    style:height
     class="responsive-image"
 />
