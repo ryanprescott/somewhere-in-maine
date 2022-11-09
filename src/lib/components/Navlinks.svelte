@@ -46,7 +46,7 @@
 <ul class="navlinks" role="navigation">
     {#each links as link}
         <a href={link.path} on:click={navigate}>
-            <li class:active={$page.url.pathname === link.path}>{link.name}</li>
+            <li>{link.name}</li>
         </a>
     {/each}
 </ul>
