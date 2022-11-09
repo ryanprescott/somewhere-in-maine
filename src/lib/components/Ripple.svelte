@@ -1,26 +1,4 @@
 <script lang="ts">
-    /*
-    import { quadOut } from 'svelte/easing'
-
-    let rippleShow = false;
-
-    const ripple = (node: any, { delay = 0, duration = 0 } : { delay: number; duration: number; })  => {
-        return {
-            delay,
-            duration,
-            css: (t: any) => {
-                const eased = quadOut(t);
-                
-                return `transform:scale(${eased}`
-            },
-        };
-    };
-
-    const showRipple = () => {
-        rippleShow = !rippleShow;
-    }
-    */
-
     let x: string | number | undefined;
     let y: string | number | undefined;
     let rippled = false;
