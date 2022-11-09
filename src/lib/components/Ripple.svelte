@@ -10,7 +10,7 @@
         x = posX;
         y = posY;
         rippled = false;
-        setTimeout(() => rippled = true, 1);
+        setTimeout(() => rippled = true, 0);
     };
 
     export const hide = () => {
