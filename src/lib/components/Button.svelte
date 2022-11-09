@@ -45,6 +45,17 @@
         padding: 0;
         overflow: hidden;
 
+        &:hover {
+            background-color: rgba($primaryAccent5, 0.2);
+        }
+
+        &-contained {
+            background-color: $primaryAccent4;
+            &:hover {
+                background-color: $primaryAccent6;
+            }
+        }
+
         &-label {
             position: relative;
             background-color: transparent;
@@ -61,9 +72,6 @@
             }
         }
 
-        &:hover {
-            background-color: rgba($primaryAccent5, 0.5);
-        }
     }
 </style>
 

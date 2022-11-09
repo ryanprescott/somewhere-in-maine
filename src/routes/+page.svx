@@ -1,6 +1,6 @@
 <script>
+    import Hero from '$lib/components/Hero.svelte';
 	import Meta from '$lib/components/Meta.svelte';
-    import Button from '$lib/components/Button.svelte';
     import Container from '$lib/components/Container.svelte';
     import ResponsiveImage from '$lib/components/ResponsiveImage.svelte';
 </script>
@@ -11,10 +11,13 @@
     type="website"
 />
 
-<ResponsiveImage 
-    height="100vh"
-    src="/img/somewhere-cover.webp"
-/>
+<Hero>
+
+Hello world!
+----
+
+This is a test of my little hero thingy.
+</Hero>
 
 <Container>
 <a id="listen"> </a>

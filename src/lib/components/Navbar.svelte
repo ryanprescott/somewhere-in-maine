@@ -23,7 +23,7 @@
         background-color: transparent;
         width: 100%;
         z-index: 99999;
-        transition: background-color 0.5s, box-shadow 0.5s;
+        transition: background-color 0.25s, box-shadow 0.25s;
 
         &-filled {
             box-shadow: rgba($black, 0.1) 2px 2px 5px;

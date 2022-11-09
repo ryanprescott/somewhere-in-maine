@@ -34,11 +34,8 @@
             margin: 0;
             list-style: none;
             letter-spacing: 0.325px;
-            &.active {
-                color: $onSurface;
-                font-weight: bold;
-                letter-spacing: 0;
-            }
+            font-weight: bold;
+            letter-spacing: 0;
         }
     }
 </style>
