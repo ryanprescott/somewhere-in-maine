@@ -41,6 +41,8 @@
         max-height: 0px;
         overflow: hidden;
         transition: max-height 0.5s ease-in-out;
+        display: flex;
+        justify-content: space-around;
         &.shown {
             max-height: 65px;
         }

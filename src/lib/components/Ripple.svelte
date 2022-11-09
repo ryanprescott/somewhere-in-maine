@@ -24,7 +24,7 @@
     @keyframes ripple {
         0% {
             transform: translate(-50%, -50%) scale(0);
-            opacity: 1;
+            opacity: 0.5;
         }
         100% {
             transform: translate(-50%, -50%) scale(1);

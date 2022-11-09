@@ -60,6 +60,5 @@
 <main>
     <slot></slot>
 </main>
-{variant}
 
 <svelte:window bind:scrollY={scroll} />

@@ -13,6 +13,7 @@
 
     .navlinks {
         padding: 0;
+        width: fit-content;
         display: flex;
         a, a:visited {
             color: $primaryAccent1;

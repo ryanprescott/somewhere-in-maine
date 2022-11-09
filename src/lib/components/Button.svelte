@@ -62,8 +62,7 @@
         }
 
         &:hover {
-            background-color: $primaryAccent5;
-            border: 1px $primaryAccent5 solid;
+            background-color: rgba($primaryAccent5, 0.5);
         }
     }
 </style>
