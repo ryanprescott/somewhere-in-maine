@@ -48,16 +48,10 @@
         &-label {
             position: relative;
             background-color: transparent;
+            display: flex;
             width: 100%;
             height: 100%;
             padding: 12px;
-
-            &-guard {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                margin: -12px -12px;
-            }
         }
 
         &-icon {
