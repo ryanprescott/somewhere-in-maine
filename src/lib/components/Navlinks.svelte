@@ -1,11 +1,18 @@
 <script lang="ts">
+    import { createEventDispatcher } from 'svelte';
     import { page } from '$app/stores';
+
     const links = [
         {name: 'Home', path: '/'},
         {name: 'Listen', path: '/#listen'},
         {name: 'About', path: '/#about'},
         {name: 'Contact', path: '/#contact'},
     ];
+
+    const dispatch = createEventDispatcher();
+    const navigate = () => {
+        dispatch('navigate')
+    };
 </script>
 
 <style lang="scss">
@@ -38,7 +45,7 @@
 
 <ul class="navlinks" role="navigation">
     {#each links as link}
-        <a href={link.path}>
+        <a href={link.path} on:click={navigate}>
             <li class:active={$page.url.pathname === link.path}>{link.name}</li>
         </a>
     {/each}

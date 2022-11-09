@@ -7,7 +7,9 @@
 
     export let variant: 'filled' | 'transparent' = 'transparent';
 
-    let show = false;
+    let shown = false;
+
+    const toggle = () => shown = !shown;
 </script>
 
 <style lang="scss">
@@ -40,7 +42,7 @@
     .navlinks-mobile {
         max-height: 0px;
         overflow: hidden;
-        transition: max-height 0.5s ease-in-out;
+        transition: max-height 0.25s ease-in-out;
         display: flex;
         justify-content: space-around;
         &.shown {
@@ -58,7 +60,7 @@
         <div class="navbar-inner">
             <Logo />
                 {#if matches}
-                    <Button icon on:click={() => show = !show}>
+                    <Button icon on:click={toggle}>
                         <MenuIcon width="32px" height="32px"/>
                     </Button>
                 {/if}
@@ -67,8 +69,8 @@
                 {/if}
         </div>
         {#if matches}
-            <div class={`navlinks-mobile ${show ? 'shown' : ''}`}>
-                <Navlinks />
+            <div class='navlinks-mobile' class:shown>
+                <Navlinks on:navigate={toggle} />
             </div>
         {/if}
     </nav>
