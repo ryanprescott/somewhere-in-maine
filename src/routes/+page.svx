@@ -18,45 +18,6 @@
 
 <Container>
 
-This is a website.
-----
-
-The text is going to keep changing as I make modifications and stuff to the layout.
-
-[Here's a link](https://www.google.com/unvisited)
-
-[Here's another link](https://www.google.com/)
-
-<Button>Sample button</Button>
-
-</Container>
-
-<Container variant="secondary">
-
-This is a website.
-----
-
-The text is going to keep changing as I make modifications and stuff to the layout.
-
-[Here's a link](https://www.google.com/unvisited)
-
-[Here's another link](https://www.google.com/)
-
-<Button>Sample button</Button>
-
-</Container>
-
-<Container>
-
-This is a website.
-----
-
-The text is going to keep changing as I make modifications and stuff to the layout.
-
-[Here's a link](https://www.google.com/unvisited)
-
-[Here's another link](https://www.google.com/)
-
-<Button>Sample button</Button>
+Coming soon!
 
 </Container>
