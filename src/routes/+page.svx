@@ -12,9 +12,9 @@
 
 <Hero>
 
-## Find Maine's lost history.
+# Find Maine's lost history.
 
-### Jump into the past and explore the forgotten with the Somewhere in Maine podcast.
+Jump into the past and explore the forgotten with the Somewhere in Maine podcast.
 </Hero>
 
 <Container>

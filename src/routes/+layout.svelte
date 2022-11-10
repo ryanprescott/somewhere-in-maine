@@ -49,7 +49,12 @@
         }
     }
 
-    :global(.hero-content h2) {
+    :global(h1, h2, h3, h4, h5, h6) {
+        font-family: Inter;
+        font-weight: 800;
+    }
+
+    :global(h1) {
         @media screen and (max-width: 1080px) {
             font-size: 54px;
         }
@@ -57,22 +62,32 @@
             font-size: 48px;
         }
         @media screen and (max-width: 500px) {
-            font-size: 36px;
+            font-size: 40px;
         }
         font-size: 64px;
-        font-family: Inter;
-        font-weight: 800;
-
-        span {
-            display: inline-block;
-        }
     }
 
+    :global(h2) {
+        @media screen and (max-width: 1080px) {
+            font-size: 40px;
+        }
+        @media screen and (max-width: 960px) {
+            font-size: 32px;
+        }
+        @media screen and (max-width: 500px) {
+            font-size: 30px;
+        }
+        font-size: 48px;
+    }
+    
     main {
         display: block;
         margin: auto;
     }
 
+    :global(.hero p) {
+        font-size: 24px;
+    }
 </style>
 
 <a id="home"> </a>
