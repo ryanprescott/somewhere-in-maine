@@ -22,10 +22,8 @@ Jump into the past and explore the forgotten with the Somewhere in Maine podcast
 
 Listen
 ----
-... dolor sit amet, consectetur adipiscing elit. Quisque eros ex, convallis id pharetra vel, consectetur ut quam. Morbi ante magna, maximus nec volutpat ut, volutpat in urna. Ut tincidunt cursus eros quis feugiat. Sed placerat commodo mi vitae lacinia. Suspendisse potenti. Suspendisse sed libero tempus, accumsan ante non, viverra est. Curabitur sed est dolor. Aliquam dapibus purus vehicula massa dapibus, a volutpat est condimentum. Aliquam sodales, libero at ultrices elementum, odio velit porta ipsum, nec hendrerit est dolor eu tellus. Fusce at tortor tortor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin lacinia mi ipsum, sed lacinia nibh placerat ac. Fusce sagittis vel est eu convallis. 
-Proin suscipit ac mi sed elementum. Suspendisse tempus eros tellus, tincidunt commodo sapien volutpat nec. In ut posuere tortor, sit amet faucibus nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis at lorem rhoncus, venenatis sem in, accumsan libero. Suspendisse justo neque, varius nec feugiat eu, feugiat ut nunc. In ac auctor quam, quis tempor justo. Proin vel laoreet lectus. Quisque ipsum mauris, fermentum sit amet nunc eu, bibendum placerat ex. Aenean ac sodales sem. 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam egestas nunc a sem finibus fermentum. Vivamus iaculis dolor mi, id condimentum est sodales vitae. Pellentesque pellentesque porttitor sagittis. Nam molestie purus efficitur nisi tempus porta. Integer pulvinar dictum lacus, luctus rutrum massa lobortis at. Vivamus dignissim lobortis eros, vitae euismod risus finibus eget. Aliquam maximus sollicitudin suscipit. In neque quam, mollis luctus libero nec, placerat dapibus urna. 
 
+No episodes are posted yet! Soon, my old blog posts about ghost towns in Maine will be available to view here.
 </Container>
 
 <Container variant="secondary">
@@ -34,16 +32,7 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac tu
 About
 ----
 
-<Figure 
-    src="/img/somewhere-cover.webp"
-    alt="A woodland road."
-    caption="The Stud Mill Road, somewhere in Township 40?"
-/>
-
-... volutpat lorem vel pretium. Morbi blandit ante enim, et convallis dui pellentesque nec. Cras efficitur diam quam, eu feugiat urna blandit at. Nullam at rhoncus nunc. Donec venenatis pretium tortor sit amet pretium. Integer pretium ex libero, vel faucibus dui lacinia venenatis. Quisque dolor tortor, facilisis in interdum eu, pretium et ex. Vivamus ut tortor id sapien interdum pulvinar eget sit amet velit. Praesent dapibus, ex venenatis congue vehicula, nibh nulla luctus lectus, ac cursus turpis ex nec arcu. Quisque pharetra posuere odio, sit amet porttitor enim. Etiam porttitor nisi dolor. Etiam blandit massa malesuada odio gravida blandit. Nullam viverra ultricies cursus. 
-Aliquam sollicitudin ultricies ex et blandit. Suspendisse et pharetra nisl. Fusce sed gravida erat. Nullam egestas scelerisque ipsum. Nulla condimentum urna ac mi tempor, in elementum ex pharetra. Nulla vel pharetra nisl. Praesent id blandit lorem. Proin eget imperdiet nunc. Vestibulum quis orci feugiat, rutrum magna vel, vehicula lacus. Etiam mollis nisi id lacus blandit auctor. Nunc id suscipit dui, posuere rutrum sapien. Phasellus tempor auctor massa imperdiet tempus. Curabitur rhoncus nisi lorem, sed vestibulum tellus elementum vel. Curabitur porta euismod ultrices. Fusce enim felis, egestas a nisi at, dictum sagittis erat. Phasellus tristique orci dignissim venenatis tristique. 
-Vestibulum vulputate dolor lorem, nec aliquet ante vehicula ut. Vestibulum id odio nulla. Cras faucibus tincidunt lorem sit amet suscipit. Ut ac diam risus. Etiam rutrum venenatis nibh vel auctor. Aliquam gravida ligula id dolor rutrum tristique. Quisque tortor odio, hendrerit in sollicitudin at, pharetra quis libero. Morbi in lorem sed neque convallis scelerisque. Ut pharetra accumsan ligula, nec mollis orci dictum sit amet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed ac nunc malesuada, finibus eros vel, posuere nisl. Curabitur ut aliquam nisi, sit amet consectetur diam. Pellentesque efficitur laoreet sem sed tempus. Nullam fringilla metus eu tempus porta. 
-
+Somewhere in Maine is a podcast about strange, unsettling and downright weird moments in Maine's history.
 </Container>
 
 <Container>
@@ -52,9 +41,7 @@ Vestibulum vulputate dolor lorem, nec aliquet ante vehicula ut. Vestibulum id od
 
 Contact
 ----
-... ligula, elementum at enim eget, blandit pretium velit. Nulla libero nisl, efficitur id lorem eu, malesuada pretium tellus. Vivamus porttitor mattis dapibus. Etiam sed vehicula arcu, et sollicitudin massa. Praesent nunc nisl, ultrices in urna quis, aliquam porta arcu. Etiam mollis aliquam purus, vel pharetra diam ornare vestibulum. Donec sapien tortor, commodo non finibus quis, ullamcorper sed neque. Vivamus vel facilisis enim. Nunc id leo mauris. Phasellus egestas ipsum nec odio ultrices, a pharetra nisl finibus. Vivamus iaculis ligula sit amet magna rhoncus ultrices. Mauris facilisis turpis id risus ornare bibendum. Phasellus ullamcorper mollis elit vitae pellentesque. Aliquam metus leo, consectetur malesuada gravida nec, semper nec neque. 
-Donec hendrerit vestibulum nisi. Vestibulum dictum neque id pretium mattis. Aliquam et porttitor quam. Nunc tincidunt libero nulla, quis laoreet sem volutpat eget. Maecenas eleifend libero eu rutrum tempus. Morbi pellentesque lorem eu sollicitudin tincidunt. Donec a vulputate justo, quis ullamcorper nibh. Fusce semper libero sit amet feugiat venenatis. Integer aliquam libero odio, eget aliquet dolor tempor aliquet. In ipsum felis, blandit at blandit in, pulvinar vel felis. Aenean rutrum faucibus molestie. Morbi at dignissim risus. 
-Quisque ultricies metus eget ante faucibus, sed rutrum nunc mattis. Ut at dignissim nisi. Nulla purus lacus, euismod sit amet mauris vitae, blandit dapibus magna. Cras in dolor metus. Donec consequat lorem at ex commodo porttitor. Nulla erat lectus, imperdiet et dolor a, gravida dapibus mauris. In vel lobortis odio. Maecenas suscipit ac enim dignissim porta. Ut ac pharetra justo, a scelerisque nibh. 
+
 
 
 </Container>
