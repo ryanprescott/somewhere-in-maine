@@ -22,6 +22,6 @@
     }
 </style>
 
-<div class="image-container" style:padding-bottom={`${paddingBottomPercent}%`}>
+<div class="image-container" style:padding-bottom="{paddingBottomPercent}%">
     <img class="image" {src} {alt} />
 </div>
