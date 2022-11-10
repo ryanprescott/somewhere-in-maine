@@ -50,6 +50,7 @@
     }
 
     :global(h1, h2, h3, h4, h5, h6) {
+        text-align: center;
         font-family: Inter;
         font-weight: 800;
     }
@@ -91,7 +92,7 @@
 </style>
 
 <a id="home"> </a>
-<Header bind:variant={variant} />
+<Header variant={variant} />
 <main>
     <slot></slot>
 </main>
