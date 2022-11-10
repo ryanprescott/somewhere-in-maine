@@ -12,10 +12,9 @@
 
 <Hero>
 
-Hello world!
-----
+## Find Maine's lost history.
 
-This is a test of my little hero thingy.
+### Jump into the past and explore the forgotten with the Somewhere in Maine podcast.
 </Hero>
 
 <Container>

@@ -1,5 +1,6 @@
 <script lang="ts">
     import '@fontsource/spline-sans';
+    import '@fontsource/inter/800.css';
     import Header from '$lib/components/Header.svelte';
 
     let scroll: number;
@@ -45,6 +46,25 @@
         }
         &:visited {
             color: $earth;
+        }
+    }
+
+    :global(.hero-content h2) {
+        @media screen and (max-width: 1080px) {
+            font-size: 54px;
+        }
+        @media screen and (max-width: 960px) {
+            font-size: 48px;
+        }
+        @media screen and (max-width: 500px) {
+            font-size: 36px;
+        }
+        font-size: 64px;
+        font-family: Inter;
+        font-weight: 800;
+
+        span {
+            display: inline-block;
         }
     }
 

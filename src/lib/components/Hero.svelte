@@ -22,6 +22,8 @@
             color: $primaryAccent6;
             text-shadow: $primaryAccent1 2px 2px;
             font-weight: bold;
+            padding: 48px;
+            text-align: center;
         }
 
         &-button-rack {
@@ -33,6 +35,7 @@
             align-items: center;
             justify-content: space-around;
         }
+
     }
 </style>
 <div 

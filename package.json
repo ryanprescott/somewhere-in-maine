@@ -32,6 +32,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@fontsource/inter": "^4.5.14",
 		"@fontsource/spline-sans": "^4.5.12",
 		"@fontsource/teko": "^4.5.9",
 		"svelte-media-queries": "^1.4.0"
