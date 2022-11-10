@@ -1,77 +1,45 @@
 <script lang="ts">
-	import Button from "./Button.svelte";
-	import MenuIcon from "./icons/MenuIcon.svelte";
-	import Logo from "./Logo.svelte";
-    import MediaQuery from "svelte-media-queries";
-	import Navlinks from "./Navlinks.svelte";
+    import { createEventDispatcher } from 'svelte';
+    import { page } from '$app/stores';
 
-    export let variant: 'filled' | 'transparent' = 'transparent';
+    const links = [
+        {name: 'Home', path: '/'},
+        {name: 'Listen', path: '/#listen'},
+        {name: 'About', path: '/#about'},
+        {name: 'Contact', path: '/#contact'},
+    ];
 
-    let shown = false;
-
-    const toggle = () => shown = !shown;
+    const dispatch = createEventDispatcher();
+    const navigate = () => {
+        dispatch('navigate')
+    };
 </script>
 
 <style lang="scss">
-    @import "../../theme/theme";
-    .navbar {
-        position: fixed;
-        margin: 0;
-        padding: 6px;
-        padding-bottom: 0px;
-        min-height: 76px;
-        background-color: transparent;
-        width: 100%;
-        z-index: 99999;
-        transition: background-color 0.25s, box-shadow 0.25s;
+    @import "../../theme/theme.scss";
 
-        &-filled {
-            box-shadow: rgba($black, 0.1) 2px 2px 5px;
-            background-color: $surface;
-        }
-
-        &-inner {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            max-width: 960px;
-            margin: auto;
-        }
-    }
-
-    .navlinks-mobile {
-        max-height: 0px;
-        overflow: hidden;
-        transition: max-height 0.25s ease-in-out;
+    .nav {
+        padding: 0;
+        width: fit-content;
         display: flex;
-        justify-content: space-around;
-        &.shown {
-            max-height: 65px;
+        height: 100%;
+        a, a:visited {
+            display: block;
+            color: $primaryAccent1 !important;
+            text-decoration: none;
+            &:hover {
+                color: $primaryAccent2;
+            }
+            padding: 12px;
+            font-weight: bold;
         }
     }
 </style>
 
-<MediaQuery query="(max-width: 800px)" let:matches>
-    <nav
-        class="navbar"
-        class:navbar-filled={variant === 'filled'}
-        class:navbar-transparent={variant === 'transparent'}
-    >
-        <div class="navbar-inner">
-            <Logo />
-                {#if matches}
-                    <Button icon on:click={toggle}>
-                        <MenuIcon width="32px" height="32px"/>
-                    </Button>
-                {/if}
-                {#if !matches}
-                    <Navlinks />
-                {/if}
-        </div>
-        {#if matches}
-            <div class='navlinks-mobile' class:shown>
-                <Navlinks on:navigate={toggle} />
-            </div>
-        {/if}
-    </nav>
-</MediaQuery>
+<nav class="nav">
+    {#each links as link}
+        <a href={link.path} on:click={navigate}>
+            {link.name}
+        </a>
+    {/each}
+</nav>

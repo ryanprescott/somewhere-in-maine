@@ -1,13 +1,12 @@
 <script>
+    import Container from '$lib/components/Container.svelte';
+    import Figure from '$lib/components/Figure.svelte';
     import Hero from '$lib/components/Hero.svelte';
 	import Meta from '$lib/components/Meta.svelte';
-    import Container from '$lib/components/Container.svelte';
-    import ResponsiveImage from '$lib/components/ResponsiveImage.svelte';
 </script>
 
 <Meta
-    title="Home"
-    description="Home page"
+    description="Somewhere in Maine is a podcast about strange, unsettling and downright weird moments in Maine's history."
     type="website"
 />
 
@@ -35,6 +34,13 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac tu
 
 Mauris interdum ...
 ----
+
+<Figure 
+    src="/img/somewhere-cover.webp"
+    alt="A woodland road."
+    caption="The Stud Mill Road, somewhere in Township 40?"
+/>
+
 ... volutpat lorem vel pretium. Morbi blandit ante enim, et convallis dui pellentesque nec. Cras efficitur diam quam, eu feugiat urna blandit at. Nullam at rhoncus nunc. Donec venenatis pretium tortor sit amet pretium. Integer pretium ex libero, vel faucibus dui lacinia venenatis. Quisque dolor tortor, facilisis in interdum eu, pretium et ex. Vivamus ut tortor id sapien interdum pulvinar eget sit amet velit. Praesent dapibus, ex venenatis congue vehicula, nibh nulla luctus lectus, ac cursus turpis ex nec arcu. Quisque pharetra posuere odio, sit amet porttitor enim. Etiam porttitor nisi dolor. Etiam blandit massa malesuada odio gravida blandit. Nullam viverra ultricies cursus. 
 Aliquam sollicitudin ultricies ex et blandit. Suspendisse et pharetra nisl. Fusce sed gravida erat. Nullam egestas scelerisque ipsum. Nulla condimentum urna ac mi tempor, in elementum ex pharetra. Nulla vel pharetra nisl. Praesent id blandit lorem. Proin eget imperdiet nunc. Vestibulum quis orci feugiat, rutrum magna vel, vehicula lacus. Etiam mollis nisi id lacus blandit auctor. Nunc id suscipit dui, posuere rutrum sapien. Phasellus tempor auctor massa imperdiet tempus. Curabitur rhoncus nisi lorem, sed vestibulum tellus elementum vel. Curabitur porta euismod ultrices. Fusce enim felis, egestas a nisi at, dictum sagittis erat. Phasellus tristique orci dignissim venenatis tristique. 
 Vestibulum vulputate dolor lorem, nec aliquet ante vehicula ut. Vestibulum id odio nulla. Cras faucibus tincidunt lorem sit amet suscipit. Ut ac diam risus. Etiam rutrum venenatis nibh vel auctor. Aliquam gravida ligula id dolor rutrum tristique. Quisque tortor odio, hendrerit in sollicitudin at, pharetra quis libero. Morbi in lorem sed neque convallis scelerisque. Ut pharetra accumsan ligula, nec mollis orci dictum sit amet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed ac nunc malesuada, finibus eros vel, posuere nisl. Curabitur ut aliquam nisi, sit amet consectetur diam. Pellentesque efficitur laoreet sem sed tempus. Nullam fringilla metus eu tempus porta. 

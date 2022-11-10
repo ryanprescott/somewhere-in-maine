@@ -1,6 +1,6 @@
 <script lang="ts">
     import '@fontsource/spline-sans';
-    import Navbar from '$lib/components/Navbar.svelte';
+    import Header from '$lib/components/Header.svelte';
 
     let scroll: number;
     $: variant = scroll >= 76 ? 'filled' : 'transparent';
@@ -31,7 +31,7 @@
         font-family: 'Spline Sans';
     }
 
-    :global(p, figcaption, h1, h2, h3, h4, h5, h6) {
+    :global(p, figcaption, h1, h2, h3, h4, h5, h6, figure) {
         margin-top: 0;
         margin-bottom: 12px;
     }
@@ -56,9 +56,10 @@
 </style>
 
 <a id="home"> </a>
-<Navbar bind:variant={variant} />
+<Header bind:variant={variant} />
 <main>
     <slot></slot>
 </main>
- 
+
+<footer></footer>
 <svelte:window bind:scrollY={scroll} />
