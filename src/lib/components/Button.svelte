@@ -4,6 +4,7 @@
 
     export let variant: 'text' | 'outlined' | 'contained' = 'text';
     export let icon = false;
+    export let type: 'submit' | 'button' = 'button';
 
     let text = variant === 'text';
     let outlined = variant === 'outlined';
@@ -76,6 +77,7 @@
 </style>
 
 <button
+    {type}
     class='button'
     class:button-text={text}
     class:button-outlined={outlined}
