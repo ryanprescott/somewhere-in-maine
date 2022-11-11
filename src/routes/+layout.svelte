@@ -5,7 +5,6 @@
 
     let scroll: number;
     $: variant = scroll >= 76 ? 'filled' : 'transparent';
-
 </script>
 
 <style lang="scss">
