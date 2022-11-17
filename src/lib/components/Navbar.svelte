@@ -1,6 +1,9 @@
 <script lang="ts">
+    import "@fontsource/teko";
     import { createEventDispatcher } from 'svelte';
-    import { page } from '$app/stores';
+    
+    export let variant: 'dark' | 'light' = 'light';
+    $: dark = variant === 'dark';
 
     const links = [
         {name: 'Home', path: '/'},
@@ -19,13 +22,28 @@
     @import "../../theme/theme.scss";
 
     .nav {
+        &.dark {
+            color: $onSurfaceDark;
+            text-shadow: $black 0 0 5px;
+            a, a:visited {
+                &:hover {
+                    color: $primaryAccent4;
+                }
+            }
+        }
+
         padding: 0;
         width: fit-content;
         display: flex;
         height: 100%;
+        font-family: Teko;
+        font-size: 24px;
+        text-transform: uppercase;
+
         a, a:visited {
+            transition: color 0.25s;
             display: block;
-            color: $primaryAccent1 !important;
+            color: inherit;
             text-decoration: none;
             &:hover {
                 color: $primaryAccent2;
@@ -36,7 +54,7 @@
     }
 </style>
 
-<nav class="nav">
+<nav class="nav" class:dark>
     {#each links as link}
         <a href={link.path} on:click={navigate}>
             {link.name}

@@ -1,12 +1,22 @@
 <script lang="ts">
   import "@fontsource/teko";
 	import Mark from "./Mark.svelte";
+
+  export let variant: 'dark' | 'light' = 'light';
+  $: dark = variant === 'dark';
+
 </script>
 
 <style lang="scss">
+  @import "../../theme/theme.scss";
+
   .logo {
     display: flex;
     align-items: center;
+    &.dark {
+      color: $onSurfaceDark;
+      text-shadow: $black 0 0 5px;
+    }
     &-text {
       user-select: none;
       font-family: 'Teko';
@@ -22,7 +32,10 @@
   }
 </style>
 
-<div class="logo">
+<div
+  class="logo"
+  class:dark
+>
   <Mark height="70px" />
   <div class="logo-text">
     <span>SOMEWHERE</span>

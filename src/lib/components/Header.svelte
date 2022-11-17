@@ -6,6 +6,9 @@
 	import Navbar from "./Navbar.svelte";
 
     export let variant: 'filled' | 'transparent' = 'transparent';
+    $: filled = variant === 'filled';
+
+    $: childVariant = variant === 'filled' ? 'light' : 'dark';
 
     let shown = false;
 
@@ -25,7 +28,7 @@
         transition: background-color 0.25s, box-shadow 0.25s;
         z-index: 1;
 
-        &-filled {
+        &.filled {
             box-shadow: rgba($black, 0.1) 2px 2px 5px;
             background-color: $surface;
         }
@@ -55,22 +58,22 @@
 <MediaQuery query="(max-width: 800px)" let:matches>
     <header
         class="header"
-        class:header-filled={variant === 'filled'}
+        class:filled
     >
         <div class="header-inner">
-            <Logo />
-                {#if matches}
-                    <Button icon on:click={toggle}>
-                        <MenuIcon width="32px" height="32px"/>
-                    </Button>
-                {/if}
-                {#if !matches}
-                    <Navbar />
-                {/if}
+            <Logo variant={childVariant} />
+            {#if matches}
+                <Button icon on:click={toggle}>
+                    <MenuIcon width="32px" height="32px"/>
+                </Button>
+            {/if}
+            {#if !matches}
+                <Navbar variant={childVariant} />
+            {/if}
         </div>
         {#if matches}
             <div class='header-mobile-only' class:shown>
-                <Navbar on:navigate={toggle} />
+                <Navbar variant={childVariant} on:navigate={toggle} />
             </div>
         {/if}
         </header>
