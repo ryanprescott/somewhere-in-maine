@@ -10,6 +10,11 @@
 <style lang="scss">
   @import "../../theme/theme.scss";
 
+  a, a:visited, a:hover {
+    color: inherit;
+    text-decoration: none;
+  }
+
   .logo {
     display: flex;
     align-items: center;
@@ -23,7 +28,8 @@
       font-weight: 600;
       font-size: 30px;
       letter-spacing: -1px;
-      margin-left: -8px;
+      margin-left: -7px;
+      margin-bottom: -6px;
       &-break {
         display: block;
         line-height: 0.8;
@@ -32,13 +38,15 @@
   }
 </style>
 
-<div
-  class="logo"
-  class:dark
->
-  <Mark height="70px" />
-  <div class="logo-text">
-    <span class="logo-text-break">SOMEWHERE</span>
-    <span class="logo-text-break">IN MAINE</span>
+<a href="/">
+  <div
+    class="logo"
+    class:dark
+  >
+    <Mark height="70px" />
+    <div class="logo-text">
+      <span class="logo-text-break">SOMEWHERE</span>
+      <span class="logo-text-break">IN MAINE</span>
+    </div>
   </div>
-</div>
+</a>

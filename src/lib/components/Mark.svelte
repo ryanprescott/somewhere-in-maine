@@ -3,11 +3,13 @@
 <script lang="ts">
     import "@fontsource/teko";
     export let height: string;
+    export let opacity: string | number = 1;
 </script>
 
 <style lang="scss">
   @import '../../theme/colors.scss';
   .mark {
+    margin-bottom: -4px;
     path {
       fill: currentColor;
       stroke: currentColor;
@@ -34,6 +36,7 @@
   viewBox="0 0 47 45"
   version="1.1"
   aria-label="Somewhere in Maine Logo"
+  style:opacity
 >
   <path
     class="mark-tree-light"

@@ -24,7 +24,7 @@
     .nav {
         &.dark {
             color: $onSurfaceDark;
-            text-shadow: 0 0 5px $black, 0 0 3px $black;
+            text-shadow: 0 0 10px $black, 0 0 5px $black;
             a, a:visited {
                 &:hover {
                     color: $primaryAccent4;
