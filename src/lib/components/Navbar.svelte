@@ -1,5 +1,5 @@
 <script lang="ts">
-    import "@fontsource/teko";
+    import "@fontsource/teko/400.css";
     import { createEventDispatcher } from 'svelte';
     
     export let variant: 'dark' | 'light' = 'light';
@@ -24,7 +24,7 @@
     .nav {
         &.dark {
             color: $onSurfaceDark;
-            text-shadow: $black 0 0 5px;
+            text-shadow: 0 0 5px $black, 0 0 3px $black;
             a, a:visited {
                 &:hover {
                     color: $primaryAccent4;
@@ -37,6 +37,7 @@
         display: flex;
         height: 100%;
         font-family: Teko;
+        font-weight: 400;
         font-size: 24px;
         text-transform: uppercase;
 
@@ -49,7 +50,6 @@
                 color: $primaryAccent2;
             }
             padding: 12px;
-            font-weight: bold;
         }
     }
 </style>

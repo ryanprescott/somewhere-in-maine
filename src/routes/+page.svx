@@ -45,3 +45,12 @@ Contact
 
 
 </Container>
+
+<Container variant="secondary">
+<a id="about"> </a>
+
+About
+----
+
+Somewhere in Maine is a podcast about strange, unsettling and downright weird moments in Maine's history.
+</Container>

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import "@fontsource/teko";
+  import "@fontsource/teko/600.css";
 	import Mark from "./Mark.svelte";
 
   export let variant: 'dark' | 'light' = 'light';
@@ -15,16 +15,16 @@
     align-items: center;
     &.dark {
       color: $onSurfaceDark;
-      text-shadow: $black 0 0 5px;
+      text-shadow: 0 0 5px $black, 0 0 3px $black;
     }
     &-text {
       user-select: none;
       font-family: 'Teko';
-      font-weight: bold;
+      font-weight: 600;
       font-size: 30px;
       letter-spacing: -1px;
       margin-left: -8px;
-      span {
+      &-break {
         display: block;
         line-height: 0.8;
       }
@@ -38,7 +38,7 @@
 >
   <Mark height="70px" />
   <div class="logo-text">
-    <span>SOMEWHERE</span>
-    <span>IN MAINE</span>
+    <span class="logo-text-break">SOMEWHERE</span>
+    <span class="logo-text-break">IN MAINE</span>
   </div>
 </div>

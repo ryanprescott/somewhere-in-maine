@@ -2,6 +2,7 @@
     import '@fontsource/spline-sans';
     import '@fontsource/inter/800.css';
     import Header from '$lib/components/Header.svelte';
+	import Footer from '../lib/components/Footer.svelte';
 
     let scroll: number;
     $: variant = scroll >= 76 ? 'filled' : 'transparent';
@@ -90,11 +91,10 @@
     }
 </style>
 
-<a id="home"> </a>
 <Header variant={variant} />
 <main>
     <slot></slot>
 </main>
+<Footer />
 
-<footer></footer>
 <svelte:window bind:scrollY={scroll} />

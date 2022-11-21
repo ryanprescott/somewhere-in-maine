@@ -1,8 +1,6 @@
 <script>
-
 	import Button from "./Button.svelte";
 	import DownIcon from "./icons/DownIcon.svelte";
-
 </script>
 
 <style lang="scss">
@@ -20,7 +18,7 @@
         &-content {
             flex-grow: 1;
             color: $primaryAccent6;
-            text-shadow: $primaryAccent1 2px 2px;
+            text-shadow: 0 0 15px $black, 0 0 5px $black;
             font-weight: bold;
             padding: 48px;
             text-align: center;
