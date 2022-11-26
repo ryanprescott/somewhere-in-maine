@@ -36,7 +36,8 @@
 
 <footer class="footer">
     <div class="footer-left">
-        <p>SOMEWHERE IN MAINE is a registered trademark of Ryan Prescott.</p>
+        <!-- <p>SOMEWHERE IN MAINE is a registered trademark of Ryan Prescott.</p> -->
+        <!-- Enable this when the trademark registration goes through. -->
     </div>
     <div class="footer-middle">
         <Mark height="70px" opacity={0.7} />
